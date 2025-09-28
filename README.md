@@ -1,1 +1,178 @@
 # comunidadplaylist
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comunidad de Playlists | Artistas que se apoyan</title>
+  <meta name="description" content="Comunidad de artistas que se apoyan con playlists colaborativas: comparte, descubre, colabora y crece sin prácticas de streaming artificial." />
+  <meta property="og:title" content="Comunidad de Playlists" />
+  <meta property="og:description" content="Únete y crece con playlists colaborativas de artistas independientes." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14; --fg:#e5e7eb; --muted:#9ca3af; --pri:#22d3ee; --accent:#f59e0b; --card:#121821; --ok:#10b981; --warn:#f59e0b; --err:#ef4444;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg, #0b0f14 0%, #0b0f14 60%, #0e1320 100%);color:var(--fg);line-height:1.6}
+    a{color:var(--pri);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(6px);background:rgba(11,15,20,.7);border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:34px;height:34px;border-radius:10px;background:radial-gradient(circle at 30% 30%, var(--accent), #8b5cf6);box-shadow:0 0 30px rgba(245,158,11,.25)}
+    .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.3px}
+    .nav a.btn{padding:10px 16px;border-radius:999px;background:var(--pri);color:#041014;font-weight:700;box-shadow:0 6px 20px rgba(34,211,238,.25)}
+    .hero{padding:80px 0 40px}
+    .hero h2{font-size:40px;margin:0 0 14px;letter-spacing:.2px}
+    .hero p{max-width:720px;color:var(--muted);font-size:18px}
+    .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--pri);color:#041014;font-weight:800}
+    .btn.secondary{background:#242b38;color:var(--fg);border:1px solid rgba(255,255,255,.08)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);padding:18px;border-radius:16px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    section{padding:40px 0}
+    .section-title{font-size:22px;margin:0 0 12px}
+    .grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.35);font-weight:700;color:#a7f3d0}
+    .list{margin:0;padding-left:18px;color:var(--fg)}
+    .list li{margin:6px 0}
+    iframe{width:100%;height:352px;border:0;border-radius:14px}
+    .faq details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px}
+    .faq summary{cursor:pointer;font-weight:700}
+    footer{padding:40px 0;color:#94a3b8}
+    .muted{color:var(--muted)}
+    @media (max-width:900px){.cards{grid-template-columns:1fr 1fr}.grid-2{grid-template-columns:1fr}}
+    @media (max-width:600px){.hero h2{font-size:32px}.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Comunidad de Playlists</h1>
+      </div>
+      <nav>
+        <a class="btn" href="#unete">Enviar tu música</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="pill">Artistas independientes • Hip hop / Urbano</span>
+      <h2>Crece con playlists colaborativas<br/>sin trucos, sin bots.</h2>
+      <p>Reunimos artistas que se apoyan de verdad: seguimiento mutuo, feedback constructivo, colaboraciones y curaduría honesta. Evitamos prácticas de streaming artificial para proteger tu catálogo.</p>
+      <div class="cta">
+        <a class="btn" href="#unete">Postula tus tracks</a>
+        <a class="btn secondary" href="#reglas">Ver reglas</a>
+      </div>
+
+      <div class="cards">
+        <div class="card"><h3>1) Comparte</h3><p>Postula hasta <strong>6 tracks</strong> por artista. Curamos semanalmente para mantener la playlist fresca.</p></div>
+        <div class="card"><h3>2) Conecta</h3><p>Únete al Discord/WhatsApp para feedback, feats y beats. Hacemos sesiones de escucha cada 15 días.</p></div>
+        <div class="card"><h3>3) Crece</h3><p>Promoción cruzada en redes. Destacamos lanzamientos y colaboraciones que respetan las reglas.</p></div>
+      </div>
+    </section>
+
+    <section id="unete" class="grid-2">
+      <div>
+        <h3 class="section-title">Únete ahora</h3>
+        <p class="muted">Para mantener todo ordenado, usamos un formulario. Comparte enlaces de Spotify, portada y redes. Te notificaremos si entras en la próxima actualización.</p>
+        <ol class="list">
+          <li>Prepara tus enlaces de Spotify (hasta 6).</li>
+          <li>Lee las <a href="#reglas">reglas</a> y confirma que las cumples.</li>
+          <li>Envía el formulario y únete al chat.</li>
+        </ol>
+        <p>
+          <a class="btn" target="_blank" rel="noopener" href="https://forms.gle/FORMULARIO_AQUI">Abrir Formulario</a>
+          <a class="btn secondary" target="_blank" rel="noopener" href="https://chat.whatsapp.com/TU_INVITE" style="margin-left:8px">Entrar al chat</a>
+        </p>
+        <p class="muted">¿No usas WhatsApp? Próximamente: Discord y Telegram.</p>
+      </div>
+      <div>
+        <h3 class="section-title">Playlists destacadas</h3>
+        <div class="card">
+          <p class="muted" style="margin-top:0">Sigue y comparte nuestra principal:</p>
+          <!-- Reemplaza el src con tu playlist real -->
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="reglas">
+      <h3 class="section-title">Reglas claras para todos</h3>
+      <div class="cards">
+        <div class="card">
+          <h3>Elegibilidad</h3>
+          <ul class="list">
+            <li>Hasta <strong>6 tracks</strong> por artista.</li>
+            <li>Audio final (no maquetas). Portada y créditos listos.</li>
+            <li>Sin contenido que viole derechos de autor o políticas de Spotify.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Comunidad</h3>
+          <ul class="list">
+            <li>Seguir y compartir la playlist principal.</li>
+            <li>Participar en feedback respetuoso y colaboraciones.</li>
+            <li>Promoción cruzada 1× por semana en redes.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Anti‑fraude</h3>
+          <ul class="list">
+            <li>Prohibido el uso de bots o granjas de streams.</li>
+            <li>Evitar patrones sospechosos (loops 24/7, misma IP, etc.).</li>
+            <li>Incumplimientos reiterados = salida de la playlist.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Preguntas frecuentes</h3>
+      <div class="faq" style="display:grid;gap:10px">
+        <details>
+          <summary>¿La inclusión garantiza reproducciones?</summary>
+          <p>No. Garantizamos curaduría, visibilidad y comunidad. El crecimiento se basa en oyentes reales y promoción responsable.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tiempo permanece un tema?</summary>
+          <p>Al menos 2–4 semanas; rotamos para mantener frescura. Temas con buen desempeño pueden permanecer más.</p>
+        </details>
+        <details>
+          <summary>¿Aceptan otros géneros?</summary>
+          <p>La base es hip hop/urbano; abrimos sub‑playlists por demanda (lo-fi, trap, R&B, etc.).</p>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-title">Contacto</h3>
+      <div class="card">
+        <p>¿Aliados, sellos o curadores? Escríbenos a <a href="mailto:hola@tudominio.com">hola@tudominio.com</a>.</p>
+        <p class="muted">Al usar esta web aceptas nuestras reglas y política de privacidad (próximamente).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="muted">© <span id="year"></span> Comunidad de Playlists — Hecho con ♥ por artistas independientes.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear()
+  </script>
+</body>
+</html>
